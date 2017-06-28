@@ -5,7 +5,7 @@ services:
     image: @@DHID@@/voting-vote
     command: python app.py
     ports:
-      - "8080:80"
+      - "8001:80"
 
   redis:
     image: redis:alpine
@@ -21,5 +21,5 @@ services:
     image: @@DHID@@/voting-result
     command: nodemon --debug server.js
     ports:
-      - "8888:80"
+      - "8002:80"
       - "5858:5858"
